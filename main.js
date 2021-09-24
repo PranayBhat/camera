@@ -5,6 +5,7 @@ function start() {
   recognition.start();
 }
 recognition.onresult = function (event) {
+  console.log("hi");
   console.log(event);
   var Content = event.results[0][0].transcript;
   document.getElementById("textbox").innerHTML = Content;
